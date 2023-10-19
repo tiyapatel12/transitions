@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Easing</title>
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+            /* padding: 20px; */
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+        p{
+            font-size: 1rem;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin-bottom: 10px;
+        }
+        div{
+            margin-bottom: 10px;
+        }
+        #ball-container {
+            width: 470px;
+            border: 1px solid;
+            padding: 20px;
+        }
+
+        .ball {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            transform: translateX(0px);
+        }
+        #ball1 {
+            background-color: blue;
+            transition: transform 2s;
+        }
+        #ball1:active{
+            transform: translateX(400px);
+        }
+        #ball2 {
+            background-color: red;
+            transition: transform linear 2s;
+        }
+        #ball2:active{
+            transform: translateX(400px);
+        }
+        #ball3 {
+            background-color: purple;
+            transition: transform ease-in 2s;
+        }
+        #ball3:active{
+            transform: translateX(400px);
+        }
+        #ball4 {
+            background-color:yellowgreen;
+            transition: transform ease-out 2s;
+        }
+        #ball4:active{
+            transform: translateX(400px);
+        }
+        #ball5 {
+            background-color:brown;
+            transition: transform ease-in-out 2s;
+        }
+        #ball5:active{
+            transform: translateX(400px);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="ball-container">
+        <p>Standard Ease</p>
+        <div id="ball1" class="ball"></div>
+        <p>Linear</p>
+        <div id="ball2" class="ball"></div>
+        <p>Ease-in</p>
+        <div id="ball3" class="ball"></div>
+        <p>Ease-out</p>
+        <div id="ball4" class="ball"></div>
+        <p>Ease-in-out</p>
+        <div id="ball5" class="ball"></div>
+    </div>
+</body>
+
+</html>

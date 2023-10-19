@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple 2D</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+    }
+    body {
+      background-color: #e9e9e9;
+    }
+    .polaroid {
+      width: 150px;
+      padding: 10px 10px 10px 10px;
+      border: 1px solid #bfbfbf;
+      background-color: white;
+      box-shadow:none;
+      position: absolute;
+      color:#999;
+      transition: .5s;
+      filter: grayscale(100%);
+      transform: scale(1);
+    }
+    .polaroid:hover{
+        color:black;
+        filter: grayscale(0%);
+        transform: rotate(0deg);
+        transform: scale(1.5);
+        box-shadow: 10px 10px 5px #aaaaaa;
+    }
+    .polaroid img {
+      max-width: 100%;
+    }
+    .rotate_right {
+      left: 500px;
+      top: 90px;
+      transform: rotate(7deg);
+    }
+    .rotate_left {
+      left: 120px;
+      top: 60px;
+      transform: rotate(-8deg);
+    }
+    .caption {
+      padding-top: 10px;
+      padding-bottom: 10px;
+      text-align: center;
+      font-family: Comic Sans MS, Comic Sans, cursive;
+      font-size: 1rem;
+    }
+  </style>
+  <body>
+    <div class="polaroid rotate_right">
+      <img src="images/beach.jpg" />
+      <p class="caption">The Beach</p>
+    </div>
+
+    <div class="polaroid rotate_left">
+      <img src="images/mountains.jpg" />
+      <p class="caption">The Mountains</p>
+    </div>
+  </body>
+</html>
